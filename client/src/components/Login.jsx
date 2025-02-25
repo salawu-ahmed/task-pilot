@@ -1,3 +1,4 @@
+import axios from 'axios'
 import { useFormik } from 'formik'
 import React, { useState } from 'react'
 import { Link } from 'react-router'
@@ -5,6 +6,8 @@ import { toast } from 'sonner'
 import * as Yup from 'yup'
 
 function Login() {
+    const API_BASEURL = import.meta.env.VITE_REACT_APP_API_BASEURL 
+
     // simple validation with Yup
     let validationSchema = Yup.object({
         email: Yup.string()
@@ -22,7 +25,11 @@ function Login() {
             password: ''
         },
         validationSchema,
-        onSubmit: (values) => console.log(values)
+        onSubmit: (values) => {
+            console.log(values);
+            axios.post(`${API_BASEURL}/users/login`, values)
+            .then(res => console.log(res.data))
+        }
 
     })
 
