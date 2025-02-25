@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router'
 
 function Login() {
     return (
@@ -9,6 +10,7 @@ function Login() {
                 <button>Login</button>
             </form>
             <button>Continue with Google</button>
+            <p>Don't have an account? <Link to='/signup'>Sign Up</Link></p>
         </div>
     )
 }

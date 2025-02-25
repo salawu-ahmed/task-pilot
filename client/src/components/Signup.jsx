@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import axios, { Axios } from 'axios'
+import { Link } from 'react-router'
 
 function Signup() {
   // const API_BASEURL = process.env.REACT_APP_API_BASEURL
@@ -89,7 +90,7 @@ function Signup() {
         <button type='submit'>Create account</button>
       </form>
       <button onClick={handleSubmit}>Sign up with Google</button>
-      <p>Already have an account? login</p>
+      <p>Already have an account? <Link to='/login'>Login</Link></p>
     </div>
   )
 }
