@@ -1,3 +1,4 @@
+import { Toaster } from 'sonner'
 import Dashboard from './components/Dashboard'
 import Login from './components/Login'
 import Home from './components/pages/Home'
@@ -8,12 +9,13 @@ function App() {
 
   return (
     <>
+    <Toaster position='top-right'/>
     <Routes>
       <Route index element={<Home/>} />
       <Route path='/login' element={<Login />} />
       <Route path='/signup' element={<Signup />} /> 
+      <Route path='/dasboard' element={<Dashboard/>}/>
     </Routes>
-     <Dashboard />
     </>
   )
 }

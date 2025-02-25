@@ -4,9 +4,9 @@ import { Link } from 'react-router'
 export default function Home() {
     return (
         <div className='container'>
-            <div className="w-full h-screen text-center flex flex-col items-center justify-center">
+            <div className="w-full px-6 h-screen text-center flex flex-col items-center justify-center">
                 <div>
-                    <h1 className='text-5xl font-bold text-center mb-2 '>Welcome to Task Pilot</h1>
+                    <h1 className='text-2xl md:text-4xl font-bold text-center mb-2 '>Welcome to Task Pilot</h1>
                     <p className='mb-4'>Manage your priorities with ease. Be 100 effective</p>
                     <Link 
                     to='/login'
